@@ -1,0 +1,24 @@
+name: API Service
+
+on:
+  push:
+    branches:
+      - 'api-service'
+  pull_request:
+    branches:
+      - 'api-service'
+  push_event:
+    branches:
+      - 'api-service'
+  pull_request_event:
+    branches:
+      - 'api-service'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Run echo
+        run: echo "Hello from GitHub Actions!"
